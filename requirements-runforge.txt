@@ -1,0 +1,5 @@
+# RunForge SDK (install from checkout next to this repo):
+#   pip install -e ../agent-runtime
+#
+# Or pin a published version when available:
+# agent-runtime==...

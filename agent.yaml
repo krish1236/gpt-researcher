@@ -1,0 +1,76 @@
+# RunForge — GPT Researcher (deep research analyst)
+# Install: pip install -e /path/to/agent-runtime  (see requirements-runforge.txt)
+
+name: deep-research-analyst
+entrypoint: agent:run
+python_version: "3.11"
+browser: false
+run_timeout_minutes: 90
+
+inputs:
+  - id: research_question
+    type: textarea
+    label: Research question
+    description: Main topic or question to investigate.
+    required: true
+
+  - id: report_type
+    type: select
+    label: Report type
+    required: false
+    options:
+      - value: research_report
+        description: Research report (default)
+      - value: resource_report
+        description: Resource report
+      - value: outline_report
+        description: Outline report
+      - value: detailed_report
+        description: Detailed report
+      - value: deep
+        description: Deep research (long-running)
+
+  - id: report_source
+    type: select
+    label: Report source
+    required: false
+    options:
+      - value: web
+        description: Web (default)
+      - value: local
+        description: Local documents (see GPT Researcher docs)
+
+  - id: tone
+    type: select
+    label: Writing tone
+    required: false
+    options:
+      - value: Objective
+        description: Objective
+      - value: Formal
+        description: Formal
+      - value: Analytical
+        description: Analytical
+      - value: Informative
+        description: Informative
+
+  - id: source_urls
+    type: textarea
+    label: Source URLs (optional)
+    description: Comma-separated URLs or JSON array of URLs to prioritize.
+    required: false
+
+  - id: document_urls
+    type: textarea
+    label: Document URLs (optional)
+    required: false
+
+  - id: complement_source_urls
+    type: boolean
+    label: Complement source URLs with web search
+    required: false
+
+  - id: verbose
+    type: boolean
+    label: Verbose logging
+    required: false
