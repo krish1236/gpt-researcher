@@ -70,7 +70,7 @@ def _resolve_tone(raw: Any) -> Tone:
 
 
 @runtime.agent(
-    name="deep-research-analyst",
+    name="Deep Research Analyst",
     planned_steps=["research", "write_report"],
 )
 async def run(ctx, input: dict[str, Any]):

@@ -1,7 +1,9 @@
-# RunForge — GPT Researcher (deep research analyst)
+# RunForge — GPT Researcher (Deep Research Analyst)
 # Install: pip install -e /path/to/agent-runtime  (see requirements-runforge.txt)
 
-name: deep-research-analyst
+name: Deep Research Analyst
+description: Comprehensive cited research reports from 20+ web sources
+emoji: 🔬
 entrypoint: agent:run
 python_version: "3.11"
 browser: false
